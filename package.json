@@ -1,0 +1,22 @@
+{
+  "name": "daheng-doc",
+  "version": "1.0.0",
+  "description": "* 转 pdf 利用 `Markdown PDF` vscode extension",
+  "main": "1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Refs/daheng-doc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Refs/daheng-doc/issues"
+  },
+  "homepage": "https://github.com/Refs/daheng-doc#readme",
+  "dependencies": {
+    "reveal.js": "^3.6.0"
+  }
+}
