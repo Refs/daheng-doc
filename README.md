@@ -10,3 +10,5 @@
 pandoc -s README.md -o 1.html --css pandoc.css
 
 ```
+
+* 做演示利用 reveal.js 而不去利用 传统的ppt
