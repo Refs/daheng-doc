@@ -2,9 +2,10 @@
   "name": "daheng-doc",
   "version": "1.0.0",
   "description": "* 转 pdf 利用 `Markdown PDF` vscode extension",
-  "main": "1.js",
+  "private": false,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,12 @@
   },
   "homepage": "https://github.com/Refs/daheng-doc#readme",
   "dependencies": {
-    "reveal.js": "^3.6.0"
+    "lodash": "^4.17.10",
+    "reveal.js": "^3.6.0",
+    "typings": "^2.1.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.7.0",
+    "webpack-cli": "^2.1.2"
   }
 }
