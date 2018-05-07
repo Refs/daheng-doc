@@ -38,7 +38,17 @@ module.exports = {
                 use: [
                     'html-loader'
                 ]
-            }
+            },
+            {
+                test: /\.js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                  loader: 'babel-loader',
+                  options: {
+                    presets: ['@babel/preset-env']
+                  }
+                }
+              }
         ]
     },
     devtool: 'source-map',
@@ -51,7 +61,7 @@ module.exports = {
             'dist'
         ]),
         new HtmlWebpackPlugin({
-            template: './src/test.html'
+            template: './src/index.html'
         }),
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin()
