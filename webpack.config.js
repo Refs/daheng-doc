@@ -7,7 +7,7 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        app: [ 'babel-polyfill','./src/main.js']
+        app: ['babel-polyfill', './src/main.js']
         // print: './src/print.js'
     },
     mode: 'development',
@@ -18,8 +18,7 @@ module.exports = {
         filename: '[name].bundle.js'
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.css$/,
                 use: [
                     'style-loader',
@@ -28,9 +27,21 @@ module.exports = {
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,
-                use: [
-                    'file-loader'
-                ]
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        outputPath: 'images/'
+                    }
+                }]
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        outputPath: 'fonts/'
+                    }
+                }]
             },
             {
                 test: /\.html$/,
@@ -42,12 +53,12 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /(node_modules|bower_components)/,
                 use: {
-                  loader: 'babel-loader',
-                  options: {
-                    presets: ["@babel/preset-env"]
-                  }
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ["@babel/preset-env"]
+                    }
                 }
-              }
+            }
         ]
     },
     devtool: 'source-map',

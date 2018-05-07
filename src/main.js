@@ -1,18 +1,5 @@
-var sum = (a, b) => {
-  return a + b;
-}
+import '../node_modules/reveal.js/css/reveal.css';
+import '../node_modules/reveal.js/css/theme/black.css';
+import Reveal from 'reveal.js'
 
-var promise = new promise((resolve, reject) => {
-  setInterval(()=>{
-    resolve(123)
-  },100)
-})
-
-promise.then(
-  (a)=>{
-    console.log(a);
-  }
-)
-
-
-sum(1,2);
+Reveal.initialize();
