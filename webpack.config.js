@@ -63,8 +63,9 @@ module.exports = {
     },
     devtool: 'source-map',
     devServer: {
-        contentBase: './src',
-        hot: true
+        contentBase: './src'
+        // when use HotModuleReplacementPlugin  `new webpack.HotModuleReplacementPlugin()` we can't set hot true; or the dev server won't refresh the browser;
+        // hot: true
     },
     plugins: [
         new CleanWebpackPlugin([
@@ -73,7 +74,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html'
         }),
-        new webpack.NamedModulesPlugin()
+        new webpack.NamedModulesPlugin(),
+        new webpack.HotModuleReplacementPlugin()
     ]
 };
 // The myImage variable will contain the final url of that image after processing . When using the cs-loader 
