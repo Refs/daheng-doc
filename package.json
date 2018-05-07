@@ -21,6 +21,7 @@
     "@babel/core": "^7.0.0-beta.46",
     "@babel/preset-env": "^7.0.0-beta.46",
     "babel-loader": "^8.0.0-beta.2",
+    "babel-polyfill": "^6.26.0",
     "lodash": "^4.17.10",
     "reveal.js": "^3.6.0",
     "typings": "^2.1.1"

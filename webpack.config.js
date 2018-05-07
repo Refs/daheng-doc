@@ -7,9 +7,8 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        app: './src/index.js'
+        app: [ 'babel-polyfill','./src/main.js']
         // print: './src/print.js'
-
     },
     mode: 'development',
     context: path.resolve(__dirname),
@@ -45,7 +44,7 @@ module.exports = {
                 use: {
                   loader: 'babel-loader',
                   options: {
-                    presets: ['@babel/preset-env']
+                    presets: ["@babel/preset-env"]
                   }
                 }
               }
