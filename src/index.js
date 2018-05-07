@@ -1,5 +1,5 @@
 import _ from 'lodash';
-// import './style.css';
+import './style.css';
 // import Icon from  './icon.png';
 import printMe from './print.js';
 
@@ -22,6 +22,13 @@ function component() {
   // myIcon.src = Icon;
 
   // element.appendChild(myIcon);
+
+  if (module.hot) {
+    module.hot.accept('./print.js', function() {
+      console.log('Accepting the updated printMe module!');
+      printMe();
+    })
+  }
 
   return element;
 }
