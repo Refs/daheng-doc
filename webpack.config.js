@@ -63,7 +63,7 @@ module.exports = {
     },
     devtool: 'source-map',
     devServer: {
-        contentBase: './dist',
+        contentBase: './src',
         hot: true
     },
     plugins: [
@@ -73,8 +73,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html'
         }),
-        new webpack.NamedModulesPlugin(),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.NamedModulesPlugin()
     ]
 };
 // The myImage variable will contain the final url of that image after processing . When using the cs-loader 
