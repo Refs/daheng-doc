@@ -32,10 +32,14 @@ module.exports = {
                 use: [
                     'file-loader'
                 ]
+            },
+            {
+                test: /\.html$/,
+                use: [
+                    'html-loader'
+                ]
             }
         ]
-    },
-    resolve: {
     },
     devtool: 'source-map',
     devServer: {
@@ -47,7 +51,7 @@ module.exports = {
             'dist'
         ]),
         new HtmlWebpackPlugin({
-            title: 'Output Management'
+            template: './src/test.html'
         }),
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin()
